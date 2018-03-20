@@ -1,6 +1,7 @@
 package wdMethods;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -192,12 +193,19 @@ public class SeMethods implements WdMethods{
 
 	}
 
-	public void takeSnap() throws Exception {
+	public void takeSnap() {
+
 
 		File scrFile = driver.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File("./snap/TrafficTest"+i+".jpg"));
-		System.out.println("Screen shot is taken");
+		File destFile = new File("./snap/TrafficTest"+i+".jpeg");
+		try {
+			FileUtils.copyFile(scrFile, destFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		i++;
+		System.out.println("Screen shot is taken");
 	}
 
 	public void closeBrowser() {
