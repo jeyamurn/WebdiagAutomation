@@ -243,7 +243,11 @@ public class SeMethods implements WdMethods{
 	
 	}
 	
+	public void focus() {
 
+	
+		((JavascriptExecutor) driver).executeScript("window.focus();");
+	}
 	
 
 

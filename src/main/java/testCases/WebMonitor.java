@@ -1,7 +1,6 @@
 package testCases;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 
@@ -11,10 +10,10 @@ import wdMethods.ProjectMethods;
 public class WebMonitor extends ProjectMethods{
 	
 	int i = 0;
-	@Test(invocationCount=2,groups="smoke")
+	@Test	//(priority=3) //(invocationCount=2,groups="smoke")
 	public void monitor() throws Exception {
 
-		//for (int i=0; i<=2; i++) {
+		for (int i=0; i<=2; i++) {
 			
 			Thread.sleep(3000);
 			webappMonitor();
@@ -35,11 +34,11 @@ public class WebMonitor extends ProjectMethods{
 
 			Thread.sleep(3000);
 			closeBrowser();
-
-			Thread.sleep(7200);
+			Thread.sleep(600000);
+			//Thread.sleep(1800000);
 				
 
-		//	}
+			}
 		
 			
 
