@@ -45,7 +45,7 @@ public class LogDebug extends ProjectMethods{
 		System.out.println("Download is successfull");
 		closeBrowser();
 		
-		Thread.sleep(600000);
+		//Thread.sleep(600000);
 		//Thread.sleep(1800000);
 	//}
 

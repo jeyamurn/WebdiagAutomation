@@ -34,7 +34,7 @@ public class WebMonitor extends ProjectMethods{
 
 			Thread.sleep(3000);
 			closeBrowser();
-			Thread.sleep(600000);
+			//Thread.sleep(600000);
 			//Thread.sleep(1800000);
 				
 

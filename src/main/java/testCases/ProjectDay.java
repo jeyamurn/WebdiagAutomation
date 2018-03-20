@@ -49,7 +49,7 @@ public class ProjectDay extends ProjectMethods{
 			Thread.sleep(2000);
 			
 			closeBrowser();
-			Thread.sleep(600000);
+			//Thread.sleep(600000);
 			//Thread.sleep(1800000);
 
 
