@@ -24,6 +24,8 @@ public class WebMonitor extends ProjectMethods{
 			WebElement memInfo = locateElement("link", "Memory Info");
 			click(memInfo);
 			Thread.sleep(3000);
+			takeSnap();
+			Thread.sleep(2000);
 			WebElement getmem = locateElement("xpath", "//html/body/div[2]/pre");
 			String meminfo = getText(getmem);
 			
