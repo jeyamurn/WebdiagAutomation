@@ -195,7 +195,7 @@ public class SeMethods implements WdMethods{
 	public void takeSnap() throws Exception {
 
 		File scrFile = driver.getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File("./snap/snap" +i+".jpeg"));
+		FileUtils.copyFile(scrFile, new File("./snap/snap" +i+".jpg"));
 		System.out.println("Screen shot is taken");
 		i++;
 	}
