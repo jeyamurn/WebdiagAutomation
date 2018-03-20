@@ -10,10 +10,10 @@ import wdMethods.ProjectMethods;
 public class WebMonitor extends ProjectMethods{
 	
 	int i = 0;
-	@Test	//(priority=3) //(invocationCount=2,groups="smoke")
+	@Test(priority=3) //(invocationCount=2,groups="smoke")
 	public void monitor() throws Exception {
 
-		for (int i=0; i<=2; i++) {
+		//for (int i=0; i<=2; i++) {
 			
 			Thread.sleep(3000);
 			webappMonitor();
@@ -38,7 +38,7 @@ public class WebMonitor extends ProjectMethods{
 			//Thread.sleep(1800000);
 				
 
-			}
+			//}
 		
 			
 

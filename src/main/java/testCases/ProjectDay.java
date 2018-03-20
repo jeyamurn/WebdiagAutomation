@@ -9,11 +9,11 @@ import wdMethods.ProjectMethods;
 
 public class ProjectDay extends ProjectMethods{
 
-	@Test	//(priority=2) //(invocationCount=2,groups="sanity")
+	@Test(priority=2) //(invocationCount=2,groups="sanity")
 
 	public void loginWebapp() throws Exception {
 
-		for (int i = 0; i<=2; i++) {
+		//for (int i = 0; i<=2; i++) {
 					
 
 			//Below steps will take screenshot of system alert
@@ -53,7 +53,7 @@ public class ProjectDay extends ProjectMethods{
 			//Thread.sleep(1800000);
 
 
-	}
+//	}
 
 }
 }

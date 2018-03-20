@@ -11,12 +11,12 @@ import wdMethods.ProjectMethods;
 public class LogDebug extends ProjectMethods{
 	
 
-@Test	//(priority=1) //(invocationCount=2,groups="regression",dependsOnGroups="sanity")
+@Test(priority=1) //(invocationCount=2,groups="regression",dependsOnGroups="sanity")
 	public void log() throws Exception {
 		
 		//Below steps will download logdebug files
 		
-		for (int i = 0; i<=2; i++) {
+	//	for (int i = 0; i<=2; i++) {
 		
 		Thread.sleep(3000);;
 		webappMonitor();
@@ -47,7 +47,7 @@ public class LogDebug extends ProjectMethods{
 		
 		Thread.sleep(600000);
 		//Thread.sleep(1800000);
-	}
+	//}
 
 
 
