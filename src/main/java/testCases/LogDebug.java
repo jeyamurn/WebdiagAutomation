@@ -20,24 +20,24 @@ public class LogDebug extends ProjectMethods{
 		
 		Thread.sleep(3000);;
 		webappMonitor();
-		focus();
+		
 		Thread.sleep(3000);
-		focus();
+		
 		WebElement selectsys1 = locateElement("xpath", "(//a[@class = 'dropdown-toggle'])[3]");
 		click(selectsys1);
 		Thread.sleep(3000);
-		focus();
+		
 		WebElement downloadLog = locateElement("link", "Dump System");
 		click(downloadLog);
 		Thread.sleep(3000);
-		focus();
+		
 		refresh();
 		Thread.sleep(2000);
-		focus();
+		
 		WebElement dwlLogdebug = locateElement("link", "Debug and log files");
 		click(dwlLogdebug);
 		Thread.sleep(3000);
-		focus();
+				
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
 		Thread.sleep(8000);
