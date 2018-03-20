@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -193,10 +194,10 @@ public class SeMethods implements WdMethods{
 
 	}
 
-	public void takeSnap() {
+	public long takeSnap() {
 
 
-		File scrFile = driver.getScreenshotAs(OutputType.FILE);
+	/*	File scrFile = driver.getScreenshotAs(OutputType.FILE);
 		File destFile = new File("./snap/TrafficTest"+i+".jpeg");
 		try {
 			FileUtils.copyFile(scrFile, destFile);
@@ -204,9 +205,19 @@ public class SeMethods implements WdMethods{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		i++;
-		System.out.println("Screen shot is taken");
-	}
+		i++;*/
+		
+		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
+		try {
+			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
+		} catch (WebDriverException e) {
+			System.out.println("The browser has been closed.");
+		} catch (IOException e) {
+			System.out.println("The snapshot could not be taken");
+		}
+		return number;
+		
+		}
 
 	public void closeBrowser() {
 		driver.close();
@@ -231,6 +242,8 @@ public class SeMethods implements WdMethods{
 		driver.navigate().refresh();
 	
 	}
+	
+
 	
 
 

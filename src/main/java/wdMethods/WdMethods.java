@@ -171,9 +171,10 @@ public interface WdMethods {
 		/**
 		 * This method will take snapshot of the browser
 		 * @author Babu - TestLeaf
+		 * @return 
 		 * @throws Exception 
 		 */
-		public void takeSnap() throws Exception;
+		public long takeSnap() throws Exception;
 			
 		/**
 		 * This method will close the active browser
