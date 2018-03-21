@@ -10,7 +10,7 @@ import wdMethods.ProjectMethods;
 public class WebMonitor extends ProjectMethods{
 	
 	int i = 0;
-	@Test(priority=3) //(invocationCount=2,groups="smoke")
+	@Test(groups="smoke",dependsOnGroups="regression")
 	public void monitor() throws Exception {
 
 		//for (int i=0; i<=2; i++) {
