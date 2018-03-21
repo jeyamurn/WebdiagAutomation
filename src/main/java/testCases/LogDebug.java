@@ -11,7 +11,7 @@ import wdMethods.ProjectMethods;
 public class LogDebug extends ProjectMethods{
 	
 
-@Test(groups="regression")
+@Test(groups="regression", dependsOnGroups="smoke")
 	public void log() throws Exception {
 		
 		//Below steps will download logdebug files

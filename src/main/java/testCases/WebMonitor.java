@@ -17,7 +17,7 @@ import wdMethods.ProjectMethods;
 public class WebMonitor extends ProjectMethods{
 
 	int i = 0;
-	@Test(groups="smoke") //,dependsOnGroups="regression")
+	@Test(groups="smoke")
 	public void monitor() throws Exception {
 
 		//for (int i=0; i<=2; i++) {

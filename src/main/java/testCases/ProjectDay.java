@@ -9,7 +9,7 @@ import wdMethods.ProjectMethods;
 
 public class ProjectDay extends ProjectMethods{
 
-	@Test(groups="sanity",dependsOnGroups="smoke")
+	@Test(groups="sanity",dependsOnGroups="regression")
 
 	public void loginWebapp() throws Exception {
 
