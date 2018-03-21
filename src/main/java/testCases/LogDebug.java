@@ -11,7 +11,7 @@ import wdMethods.ProjectMethods;
 public class LogDebug extends ProjectMethods{
 	
 
-@Test(groups="regression", dependsOnGroups="smoke")
+@Test(groups="regression", dependsOnGroups="sanity")
 	public void log() throws Exception {
 		
 		//Below steps will download logdebug files
@@ -20,7 +20,7 @@ public class LogDebug extends ProjectMethods{
 		
 		Thread.sleep(3000);;
 		webappMonitor();
-		
+		focus();
 		Thread.sleep(3000);
 		
 		WebElement selectsys1 = locateElement("xpath", "(//a[@class = 'dropdown-toggle'])[3]");
