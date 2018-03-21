@@ -38,9 +38,16 @@ public class WebMonitor extends ProjectMethods{
 		String meminfo = getText(getmem);
 		System.out.println(meminfo);
 		
+		Writer writer = null;
+		writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("C://Users//jeyamurn//.jenkins//workspace//Webdiag//traffic//traffic.txt"), "utf-8"));
+		writer.write(meminfo);
+		writer.close();
+		
+		
+	/*	
 		FileOutputStream out = new FileOutputStream("C://Users//jeyamurn//.jenkins//workspace//Webdiag//traffic//traffic.txt");
 		out.write(meminfo.getBytes());
-		out.close();
+		out.close();*/
 
 
 		Thread.sleep(3000);
