@@ -18,8 +18,13 @@ public class ProjectDay extends ProjectMethods{
 
 			//Below steps will take screenshot of system alert
 
+		input();
+
+		for (int i=0; i< 2; i++)
+		{
+		
 			Thread.sleep(3000);
-			webappDebug();
+			webappDebug(strIP[i],strPwd[i]);
 			Thread.sleep(3000);
 			WebElement selectinfo = locateElement("xpath", "(//a[@class = 'dropdown-toggle'])[1]");
 			click(selectinfo);
@@ -51,7 +56,7 @@ public class ProjectDay extends ProjectMethods{
 			closeBrowser();
 			//Thread.sleep(600000);
 			//Thread.sleep(1800000);
-
+		}
 
 //	}
 

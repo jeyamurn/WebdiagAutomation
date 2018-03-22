@@ -14,8 +14,9 @@ public interface WdMethods {
 		 * @author Babu - TestLeaf
 		 * @param browser - This will load the specified browser
 		 * 		 * 
+		 * @throws InterruptedException 
 		 */
-		public void startApp(String browser, String url) ;
+		public void startApp(String browser, String url) throws InterruptedException ;
 
 		/**
 		 * This method will locate the element using any given locator

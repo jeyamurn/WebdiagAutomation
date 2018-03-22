@@ -20,10 +20,12 @@ public class WebMonitor extends ProjectMethods{
 	@Test(groups="smoke")
 	public void monitor() throws Exception {
 
-		//for (int i=0; i<=2; i++) {
+		input();
 
+		for (int i=0; i< 2; i++)
+		{
 		Thread.sleep(3000);
-		webappMonitor();
+		webappMonitor(strIP[i]);
 		WebElement selectsys = locateElement("xpath", "(//a[@class = 'dropdown-toggle'])[3]");
 		click(selectsys);
 		Thread.sleep(3000);
@@ -59,5 +61,5 @@ public class WebMonitor extends ProjectMethods{
 		//}
 
 
-
+		}
 	}}

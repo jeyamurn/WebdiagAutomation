@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -23,7 +24,7 @@ public class SeMethods implements WdMethods{
 	int i=1;
 
 
-	public void startApp(String browser, String url) {
+	public void startApp(String browser, String url) throws InterruptedException {
 		if(browser.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver_32.exe");		
 			driver = new ChromeDriver();	
@@ -37,7 +38,15 @@ public class SeMethods implements WdMethods{
 		}
 
 		driver.manage().window().maximize();
+
+		/*JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("var pr=prompt('Enter your URL please:',''); alert(pr);");  
+		Thread.sleep(15000L);
+		String URL = driver.switchTo().alert().getText();
+		driver.switchTo().alert().accept();
+		driver.get(URL);*/
 		driver.get(url);
+		        
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("The Browser "+browser+" is launched");
 	}
@@ -197,7 +206,7 @@ public class SeMethods implements WdMethods{
 	public long takeSnap() {
 
 
-	/*	File scrFile = driver.getScreenshotAs(OutputType.FILE);
+		/*	File scrFile = driver.getScreenshotAs(OutputType.FILE);
 		File destFile = new File("./snap/TrafficTest"+i+".jpeg");
 		try {
 			FileUtils.copyFile(scrFile, destFile);
@@ -206,7 +215,7 @@ public class SeMethods implements WdMethods{
 			e.printStackTrace();
 		}
 		i++;*/
-		
+
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L; 
 		try {
 			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
@@ -216,8 +225,8 @@ public class SeMethods implements WdMethods{
 			System.out.println("The snapshot could not be taken");
 		}
 		return number;
-		
-		}
+
+	}
 
 	public void closeBrowser() {
 		driver.close();
@@ -238,18 +247,18 @@ public class SeMethods implements WdMethods{
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
 	public void refresh() {
-		
+
 		driver.navigate().refresh();
-	
+
 	}
-	
+
 	public void focus() {
 
-	
+
 		((JavascriptExecutor) driver).executeScript("window.focus();");
 	}
 
-	
+
 
 
 }

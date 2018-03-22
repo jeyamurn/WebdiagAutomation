@@ -17,9 +17,12 @@ public class LogDebug extends ProjectMethods{
 		//Below steps will download logdebug files
 		
 	//	for (int i = 0; i<=2; i++) {
-		
+	input();
+
+	for (int i=0; i< 2; i++)
+	{
 		Thread.sleep(3000);;
-		webappMonitor();
+		webappMonitor(strIP[i]);
 		focus();
 		Thread.sleep(3000);
 		
@@ -49,7 +52,7 @@ public class LogDebug extends ProjectMethods{
 		//Thread.sleep(1800000);
 	//}
 
-
+	}
 
 }
 }
